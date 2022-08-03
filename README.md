@@ -23,3 +23,12 @@ Discard git changes
 git stash save --keep-index --include-untracked && git stash drop
 ```
  This is text for a test comm it from vscode online using an iPad.
+
+
+Kill postgres connections
+```
+SELECT pg_terminate_backend(pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = 'mydb' -- ← change this to your DB
+  AND pid <> pg_backend_pid();
+```
