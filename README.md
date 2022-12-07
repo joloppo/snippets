@@ -33,6 +33,6 @@ WHERE pg_stat_activity.datname = 'mydb' -- ← change this to your DB
 
 Print all of a dataframe
 ```
-with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
+with pd.option_context('display.max_rows', None, 'display.max_columns', None):
     print(df)
 ```
