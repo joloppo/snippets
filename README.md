@@ -30,3 +30,9 @@ FROM pg_stat_activity
 WHERE pg_stat_activity.datname = 'mydb' -- ← change this to your DB
   AND pid <> pg_backend_pid();
 ```
+
+Print all of a dataframe
+```
+with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
+    print(df)
+```
