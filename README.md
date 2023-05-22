@@ -36,3 +36,8 @@ Print all of a dataframe
 with pd.option_context('display.max_rows', None, 'display.max_columns', None):
     print(df)
 ```
+
+Get DBeaver credentials
+```
+openssl aes-128-cbc -d -K babb4a9f774ab853c96c2d653dfe544a -iv 00000000000000000000000000000000 -in "${HOME}/Library/DBeaverData/workspace6/General/.dbeaver/.credentials-config.json.bak" | dd bs=1 skip=16 2>/dev/null
+```
