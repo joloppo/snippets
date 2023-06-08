@@ -41,3 +41,14 @@ Get DBeaver credentials
 ```
 openssl aes-128-cbc -d -K babb4a9f774ab853c96c2d653dfe544a -iv 00000000000000000000000000000000 -in "${HOME}/Library/DBeaverData/workspace6/General/.dbeaver/.credentials-config.json.bak" | dd bs=1 skip=16 2>/dev/null
 ```
+
+
+Git delete tracking branches not on remote
+```
+git remote prune origin
+```
+
+Git delete local branches not on remote
+```
+git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+```
