@@ -52,3 +52,6 @@ Git delete local branches not on remote
 ```
 git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 ```
+
+Installing pytables Macos
+https://github.com/freqtrade/freqtrade/issues/4162#issuecomment-890377818
