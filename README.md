@@ -54,3 +54,8 @@ git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git b
 ```
 
 Installing pytables Macos [github1](https://github.com/freqtrade/freqtrade/issues/4162#issuecomment-890377818) --- [stackoverflow](https://stackoverflow.com/questions/73029883/could-not-find-hdf5-installation-for-pytables-on-m1-mac)
+
+Kill process running or port 8000 MacOS
+```
+kill -9 $(lsof -ti:8000)
+```
