@@ -59,3 +59,8 @@ Kill process running or port 8000 MacOS
 ```
 kill -9 $(lsof -ti:8000)
 ```
+
+When psycopg wont install python stuff. install some libpq shit or psycopg binary idk
+```
+sudo apt install libpq-dev
+```
