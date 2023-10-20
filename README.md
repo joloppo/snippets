@@ -64,3 +64,8 @@ When psycopg wont install python stuff. install some libpq shit or psycopg binar
 ```
 sudo apt install libpq-dev
 ```
+
+Pyzmq on M1 - use this version (needed for jupyter notebook (?))
+```
+'pyzmq==25.1.0'
+```
