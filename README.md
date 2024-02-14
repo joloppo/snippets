@@ -73,3 +73,8 @@ Pyzmq on M1 - use this version (needed for jupyter notebook (?))
 ```
 'pyzmq==25.1.0'
 ```
+
+Print entire pandas df dataframe
+```
+with pd.option_context('display.max_rows', None, 'display.max_columns', None, 'display.precision', 3,):
+```
