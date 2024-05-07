@@ -78,3 +78,8 @@ Print entire pandas df dataframe
 ```
 with pd.option_context('display.max_rows', None, 'display.max_columns', None, 'display.precision', 3,):
 ```
+
+Get current dir subdir/file sizes, sorted
+```
+du -h -d 1 | sort -h
+```
