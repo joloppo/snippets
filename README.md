@@ -83,3 +83,31 @@ Get current dir subdir/file sizes, sorted
 ```
 du -h -d 1 | sort -h
 ```
+
+
+
+Postgres stuffs
+```sql
+SELECT relname, n_live_tup FROM pg_stat_user_tables; -- Table & counts
+
+SELECT
+   relname  as table_name,
+   pg_size_pretty(pg_total_relation_size(relid)) As "Total Size",
+   pg_size_pretty(pg_indexes_size(relid)) as "Index Size",
+   pg_size_pretty(pg_relation_size(relid)) as "Actual Size"
+   FROM pg_catalog.pg_statio_user_tables 
+ORDER BY pg_total_relation_size(relid) DESC;
+
+
+
+SELECT 
+    attname AS column_name,
+    avg_width AS average_size_in_bytes
+FROM 
+    pg_stats
+WHERE 
+    schemaname = 'public'
+    AND tablename = 'my_table';
+
+select pg_size_pretty(pg_database_size('my_db'));
+```
