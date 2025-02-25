@@ -79,6 +79,13 @@ sudo apt install libpq-dev
 with pd.option_context('display.max_rows', None, 'display.max_columns', None, 'display.precision', 3,):
 ```
 
+```
+import polars as pl
+def full_print(df):
+    with pl.Config(fmt_str_lengths=1000, tbl_width_chars=1000, fmt_table_cell_list_len=100, set_tbl_rows=100):
+        display(df)
+```
+
 ### Get current dir subdir/file sizes, sorted
 ```
 du -h -d 1 | sort -h
